@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+header .toggle-btn {
+  display: none;
+}
+
+header .header {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  padding: 1rem 0;
+  justify-content: space-between;
+}
+
+header .header .logo {
+  color: white;
+}
+
+header .header nav {
+  width: 40%;
+}
+
+header .header nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+header .header nav ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100vh;
+}
+
+.hero {
+  position: absolute;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.btn {
+  width: 100%;
+  position: absolute;
+  top: 68.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn #get {
+  text-transform: uppercase;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-weight: 700;
+  background-color: transparent;
+  padding: .7em 1.5em;
+  transition: all 1s ease;
+}
+
+.btn #get a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn #get:hover {
+  border: 1px solid white;
+  background-color: black;
+}
+
+.btn #get:hover a {
+  color: white;
+}
+
+footer {
+  position: absolute;
+  bottom: 2%;
+  left: 40%;
+  font-size: 20px;
+}
+
+footer i {
+  color: red;
+  font-size: 15px;
+}
+
+.bars, .rem {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    width: 768px;
+    max-width: 100%;
+  }
+  .bars, .rem {
+    display: block;
+  }
+  .bars i, .rem i {
+    font-size: 20px;
+    color: white;
+  }
+  .rem {
+    display: none;
+  }
+  header .toggle-btn {
+    font-size: 25px;
+    color: white;
+    display: block;
+    position: absolute;
+    top: 3%;
+    right: 5%;
+  }
+  header .toggle-btn .rem {
+    display: none;
+  }
+  header .header {
+    height: 100vh;
+  }
+  header .header nav {
+    width: 100%;
+  }
+  header .header nav ul {
+    display: block;
+    transform: translateY(-200%);
+  }
+  .bars, .rem {
+    position: absolute;
+    top: 4%;
+    right: 5%;
+  }
+  header.active {
+    background-color: #0090ff;
+    z-index: 122;
+  }
+  header.active .logo .bars {
+    display: none;
+  }
+  header.active .rem {
+    display: block;
+  }
+  header.active .header nav {
+    position: absolute;
+    width: 100%;
+  }
+  header.active .header nav ul {
+    margin-top: 15%;
+    display: block;
+    text-align: center;
+    line-height: 5;
+    transform: translateY(0);
+  }
+  footer {
+    left: auto;
+    width: 100%;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=main.css.map */
