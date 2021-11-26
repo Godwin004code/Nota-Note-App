@@ -28,10 +28,7 @@ function addNew() {
         textArea.classList.toggle('hidden')
     })
     saveBtn.addEventListener('click', function(e) {
-        
-        main.innerHTML = textArea.value
-        
-        update(textArea.value)
+        alert('You just saved a note')
         
     })
     delBtn.addEventListener('click', function() {
